@@ -20,12 +20,13 @@ import unh from './images/unh.png';
 import necha from './images/necha.png';
 import oakland from './images/oaklanduniversity.png';
 import mines from './images/coloradoschoolofmines.png'
+import nau from './images/nau.png'
 
 import acha2024 from './images/acha2024.png';
 function Schedule() {
     //add wins, losses, etc once database table is set up
     const [schedule, setSchedule] = useState();
-    const [scheduleYear, setScheduleYear] = useState("2024")
+    const [scheduleYear, setScheduleYear] = useState("2025")
     const [scroll, setScroll] = useState(window.scrollY);
     const image = {
         'bates':bates,
@@ -44,7 +45,8 @@ function Schedule() {
         'unh': unh,
         'um': um,
         'oakland': oakland,
-        'mines': mines
+        'mines': mines,
+        'nau': nau
     };
     const handleScroll = () => {
         setScroll(window.scrollY);
@@ -101,6 +103,7 @@ function Schedule() {
             </div>
             <header id='Schedule' className='section-header'>Schedule</header>
             <select className="dropdown" onChange={handleChange} value = {scheduleYear}>
+                <option value="2025">2025 - 2026</option>
                 <option value="2024">2024 - 2025</option>
                 <option value= "2023">2023 - 2024</option>
             </select>
